@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ToxicSlime : MonoBehaviour
+public class DestroyMode : MonoBehaviour
 {
     public GameObject explosionEffect;
 
