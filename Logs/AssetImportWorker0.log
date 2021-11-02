@@ -227,3 +227,4 @@ Received Import Request.
 Start importing Assets/Sprites/FROGGY Game Over Text.png using Guid(0c81df221d971bf43894c228cddbe142) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b444c8382090c42800867de4ed59b0c7') in 0.039173 seconds 
   Import took 0.051398 seconds .
 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
