@@ -7,7 +7,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Car_moving3
+  m_Name: Car_Moving_Red
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -20,7 +20,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 78b04a1d2e3e337469cc34b6293cce4b, type: 2}
+  m_Motion: {fileID: 7400000, guid: 4d43b587af39e9b45a31d6e07d2e7843, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
