@@ -1,4 +1,10 @@
-Base path: 'C:/Program Files (x86)/Unity/2020.3.16f1/Editor/Data', plugins path 'C:/Program Files (x86)/Unity/2020.3.16f1/Editor/Data/PlaybackEngines'
+Base path: 'C:/Program Files/Unity/Hub/Editor/2020.3.16f1/Editor/Data', plugins path 'C:/Program Files/Unity/Hub/Editor/2020.3.16f1/Editor/Data/PlaybackEngines'
 Cmd: initializeCompiler
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 Cmd: shutdown
+=======
+>>>>>>> parent of 5de2627 (Merge branch 'main' of https://github.com/Brenden211/Intro-to-Game-Dev-Mid-Term)
+=======
+>>>>>>> parent of 5de2627 (Merge branch 'main' of https://github.com/Brenden211/Intro-to-Game-Dev-Mid-Term)
