@@ -1,10 +1,9 @@
 fileFormatVersion: 2
-guid: 1a7aa7f25bd56c34fb32d6aa6776670b
+guid: 4752680ab2168334ca1f02f2e1283ede
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - FROGGY: {fileID: 1765544237559254937, guid: d93faca6dd77eab4e9a5d1a9c98837d3, type: 3}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
