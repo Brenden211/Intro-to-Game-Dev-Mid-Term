@@ -7,7 +7,7 @@ public class MenuScript : MonoBehaviour
 {
     public void LoadLevel(string name)
     {
-        SceneManager.LoadScene(name);
+        SceneManager.LoadScene("level");
     }
 
     public void Quit()
