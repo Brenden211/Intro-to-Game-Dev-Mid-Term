@@ -4,38 +4,58 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-
+    public float FowardSpeed = 15f;
+    public float JumpHeight = 50f;
+    public float HorizontalSpeed = 15f;
     public Rigidbody rb;
-    public float MoveSpeed;
-    public float UpSpeed;
-    public float RightSpeed;
-    public float LeftSpeed;
+    public bool PlayerOnGround = true;
+
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody>();
+    }
 
     void Update()
     {
 
-        Physics.gravity = new Vector3(0, -120f, 0);
-
-        if (Input.GetKeyDown("space"))
+        if (Input.GetButtonDown("Jump") && PlayerOnGround && (Input.GetKey("w")))
         {
-            rb.AddForce(0, UpSpeed, 0 * Time.deltaTime);
+
+            rb.AddForce(new Vector3(0, JumpHeight, FowardSpeed), ForceMode.Impulse);
+            PlayerOnGround = false;
+
         }
 
-        if (Input.GetKey("w"))
+        if (Input.GetButtonDown("Jump") && PlayerOnGround && (Input.GetKey("a")))
         {
-            rb.AddForce(0, 0, MoveSpeed * Time.deltaTime, ForceMode.VelocityChange);
+
+            rb.AddForce(new Vector3(-HorizontalSpeed, JumpHeight, FowardSpeed), ForceMode.Impulse);
+            PlayerOnGround = false;
+
         }
 
-        if (Input.GetKey("d"))
+        if (Input.GetButtonDown("Jump") && PlayerOnGround && (Input.GetKey("d")))
         {
-            rb.AddForce(RightSpeed / 50, 0, 0 * Time.deltaTime, ForceMode.VelocityChange);
+
+            rb.AddForce(new Vector3(HorizontalSpeed, JumpHeight, FowardSpeed), ForceMode.Impulse);
+            PlayerOnGround = false;
+
         }
 
-        if (Input.GetKey("a"))
+        if (Input.GetButtonDown("Jump") && PlayerOnGround && (Input.GetKey("s")))
         {
-            rb.AddForce(LeftSpeed / 50, 0, 0 * Time.deltaTime, ForceMode.VelocityChange);
-        }
 
+            rb.AddForce(new Vector3(0, JumpHeight, -FowardSpeed), ForceMode.Impulse);
+            PlayerOnGround = false;
+
+        }
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.name == "Ground")
+        {
+            PlayerOnGround = true;
+        }
+    }
 }
