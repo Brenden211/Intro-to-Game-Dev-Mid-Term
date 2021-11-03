@@ -3,23 +3,15 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-
+    public float RestartDelay = 1f;
     bool gameHasEnded = false;
-
-    public float restartDelay = 1f;
-
-    public void CompleteLevel()
-    {
-        Debug.Log("Level Completed");
-    }
-
     public void EndGame()
     {
         if (gameHasEnded == false)
         {
-            gameHasEnded = true;
             Debug.Log("Game Over");
-            Invoke("Restart", restartDelay);
+            gameHasEnded = true;
+            Invoke("Restart", 2f);
         }
     }
 
