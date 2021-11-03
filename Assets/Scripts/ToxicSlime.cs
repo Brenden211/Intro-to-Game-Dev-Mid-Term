@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ToxicSlime : MonoBehaviour
 {
@@ -8,7 +9,7 @@ public class ToxicSlime : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Application.Quit();
+        SceneManager.LoadScene("GameOver");
     }
 }
 
