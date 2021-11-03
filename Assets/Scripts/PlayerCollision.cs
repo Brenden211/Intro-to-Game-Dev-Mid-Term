@@ -9,7 +9,6 @@ public class PlayerCollision : MonoBehaviour
     {
         if (collosionInfo.collider.tag == "Obstacle")
         {
-            FindObjectOfType<GameManager>().EndGame();
             SceneManager.LoadScene("GameOver");
         }
     }
