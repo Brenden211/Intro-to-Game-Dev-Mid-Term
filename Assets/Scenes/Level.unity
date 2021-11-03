@@ -49745,7 +49745,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a7aa7f25bd56c34fb32d6aa6776670b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FowardSpeed: 25
+  FowardSpeed: 40
   JumpHeight: 80
   HorizontalSpeed: 50
   rb: {fileID: 234466746}

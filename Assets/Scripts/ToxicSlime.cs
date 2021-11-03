@@ -16,6 +16,7 @@ public class ToxicSlime : MonoBehaviour
         //Destroy(this), for instance, will destroy the component, not the object.
         //Destroy(this.gameObject) will destroy the object where this component is.
         Destroy(other.gameObject);
+
     }
 }
 
