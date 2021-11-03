@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerCollision : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class PlayerCollision : MonoBehaviour
         if (collosionInfo.collider.tag == "Obstacle")
         {
             FindObjectOfType<GameManager>().EndGame();
+            SceneManager.LoadScene("GameOver");
         }
     }
 }

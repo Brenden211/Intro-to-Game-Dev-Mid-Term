@@ -11,12 +11,7 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("Game Over");
             gameHasEnded = true;
-            Invoke("Restart", 2f);
+            SceneManager.LoadScene("GameOver");
         }
-    }
-
-    void Restart()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
