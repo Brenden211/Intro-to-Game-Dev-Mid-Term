@@ -9,6 +9,8 @@ public class PlayerMovement : MonoBehaviour
     public float HorizontalSpeed = 15f;
     public Rigidbody rb;
     public bool PlayerOnGround = true;
+    public AudioClip triggerSound;
+    public AudioSource source;
 
     private void Start()
     {
@@ -22,6 +24,7 @@ public class PlayerMovement : MonoBehaviour
         {
 
             rb.AddForce(new Vector3(0, JumpHeight, FowardSpeed), ForceMode.Impulse);
+            source.PlayOneShot(triggerSound);
             PlayerOnGround = false;
 
         }
@@ -30,6 +33,7 @@ public class PlayerMovement : MonoBehaviour
         {
 
             rb.AddForce(new Vector3(-HorizontalSpeed, JumpHeight, FowardSpeed), ForceMode.Impulse);
+            source.PlayOneShot(triggerSound);
             PlayerOnGround = false;
 
         }
@@ -38,6 +42,7 @@ public class PlayerMovement : MonoBehaviour
         {
 
             rb.AddForce(new Vector3(HorizontalSpeed, JumpHeight, FowardSpeed), ForceMode.Impulse);
+            source.PlayOneShot(triggerSound);
             PlayerOnGround = false;
 
         }
@@ -46,6 +51,7 @@ public class PlayerMovement : MonoBehaviour
         {
 
             rb.AddForce(new Vector3(0, JumpHeight, -FowardSpeed), ForceMode.Impulse);
+            source.PlayOneShot(triggerSound);
             PlayerOnGround = false;
 
         }

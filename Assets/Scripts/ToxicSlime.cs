@@ -9,7 +9,9 @@ public class ToxicSlime : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        SceneManager.LoadScene("GameOver");
+        Vector3 particleSpawnPoint = other.transform.position;
+        Instantiate(explosionEffect, particleSpawnPoint, Quaternion.identity);
+        Destroy(other.gameObject);
     }
 }
 
